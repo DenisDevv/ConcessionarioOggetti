@@ -12,7 +12,7 @@ public class Main {
         auto4.setModello("A4");
         System.out.println(auto1.getAuto());
         System.out.println(auto2.getAuto());
-        System.out.println(auto3.getAuto());
-        System.out.println(auto4.getAuto());
+        System.out.println(auto3.getMarca() + ", " + auto3.getPrezzo() + "€");
+        System.out.println(auto4.getMarca() + ", " + auto4.getModello() + ", " + auto4.getPrezzo() + "€");
     }
 }

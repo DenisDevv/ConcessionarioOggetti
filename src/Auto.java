@@ -39,4 +39,13 @@ public class Auto {
     public String getAuto() {
         return marca + ", " + modello + ", " + prezzo + "€";
     }
+    public String getMarca() {
+        return marca;
+    }
+    public String getModello() {
+        return modello;
+    }
+    public double getPrezzo() {
+        return prezzo;
+    }
 }
