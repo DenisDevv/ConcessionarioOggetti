@@ -1,15 +1,42 @@
-import java.util.ArrayList;
-
 public class Auto {
-    static ArrayList<String> macchine = new ArrayList<>();
+    private String marca;
+    private String modello;
+    private double prezzo;
     public Auto(String m, String mod, double p) {
-        macchine.add(m + ", " + mod + ", " + p + "€");
+        marca = m;
+        modello = mod;
+        prezzo = p;
     }
-    public static String getAuto() {
-        StringBuilder auto = new StringBuilder();
-        for (String s : macchine.toArray(new String[macchine.size()])) {
-            auto.append(s).append("\n");
-        }
-        return auto.toString();
+    public Auto(String m, String mod) {
+        marca = m;
+        modello = mod;
+    }
+    public Auto(String m, double p) {
+        marca = m;
+        prezzo = p;
+    }
+    public Auto(String m) {
+        marca = m;
+    }
+    public Auto(double p, String mod) {
+        prezzo = p;
+        modello = mod;
+    }
+    public Auto(double p) {
+        prezzo = p;
+    }
+    public Auto() {
+    }
+    public void setMarca(String m) {
+        marca = m;
+    }
+    public void setModello(String mod) {
+        modello = mod;
+    }
+    public void setPrezzo(double p) {
+        prezzo = p;
+    }
+    public String getAuto() {
+        return marca + ", " + modello + ", " + prezzo + "€";
     }
 }
