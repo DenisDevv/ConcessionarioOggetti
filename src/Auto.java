@@ -18,10 +18,6 @@ public class Auto {
     public Auto(String m) {
         marca = m;
     }
-    public Auto(double p, String mod) {
-        prezzo = p;
-        modello = mod;
-    }
     public Auto(double p) {
         prezzo = p;
     }
