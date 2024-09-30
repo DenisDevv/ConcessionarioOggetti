@@ -4,6 +4,7 @@ public class Main {
         Auto auto2 = new Auto("Ford", "Fiesta", 12000);
         Auto auto3 = new Auto();
         Auto auto4 = new Auto("Audi", 50000);
+        // auto1.setPrezzo(-10000);
         auto1.setPrezzo(10000);
         auto2.setModello("Focus");
         auto3.setMarca("Mercedes");
