@@ -3,9 +3,7 @@ public class Auto {
     private String modello;
     private double prezzo;
     public Auto(String m, String mod, double p) {
-        if (p < 0) {
-            throw new IllegalArgumentException("Prezzo non valido, il prezzo deve essere maggiore o uguale a 0");
-        }
+        ifPrezzo(p);
         marca = m;
         modello = mod;
         prezzo = p;
@@ -15,9 +13,7 @@ public class Auto {
         modello = mod;
     }
     public Auto(String m, double p) {
-        if (p < 0) {
-            throw new IllegalArgumentException("Prezzo non valido, il prezzo deve essere maggiore o uguale a 0");
-        }
+        ifPrezzo(p);
         marca = m;
         prezzo = p;
     }
@@ -25,9 +21,7 @@ public class Auto {
         marca = m;
     }
     public Auto(double p) {
-        if (p < 0) {
-            throw new IllegalArgumentException("Prezzo non valido, il prezzo deve essere maggiore o uguale a 0");
-        }
+        ifPrezzo(p);
         prezzo = p;
     }
     public Auto() {
@@ -39,9 +33,7 @@ public class Auto {
         modello = mod;
     }
     public void setPrezzo(double p) {
-        if (p < 0) {
-            throw new IllegalArgumentException("Prezzo non valido, il prezzo deve essere maggiore o uguale a 0");
-        }
+        ifPrezzo(p);
         prezzo = p;
     }
     public String getAuto() {
@@ -55,5 +47,9 @@ public class Auto {
     }
     public double getPrezzo() {
         return prezzo;
+    }
+    private void ifPrezzo (double p) {
+        if (p < 0)
+            throw new IllegalArgumentException("Prezzo non valido, il prezzo deve essere maggiore o uguale a 0");
     }
 }
